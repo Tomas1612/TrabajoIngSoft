@@ -19,7 +19,6 @@
         		<uniqueVersion>false</uniqueVersion>
         		<id>jenkins</id>
         		<name>jenkins</name>
-        		<url>~/Universidad/payroll</url>
         		<layout>default</layout>
     		</repository>
 	</distributionManagement>
