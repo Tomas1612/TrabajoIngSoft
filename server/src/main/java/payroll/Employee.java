@@ -15,7 +15,7 @@ class Employee {
 	private String role;
 
 	Employee() {}
-	//me gusta el queso y el chori
+	//me gusta el queso y el chori y la mostaza
 	Employee(String name, String role) {
 		this.name = name;
 		this.role = role;
