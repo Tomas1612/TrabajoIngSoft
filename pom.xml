@@ -14,6 +14,16 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
+	<distributionManagement>
+    		<repository>
+        		<uniqueVersion>false</uniqueVersion>
+        		<id>jenkins</id>
+        		<name>jenkins</name>
+        		<url>~/Universidad/payroll</url>
+        		<layout>default</layout>
+    		</repository>
+	</distributionManagement>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
