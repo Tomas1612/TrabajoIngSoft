@@ -1,7 +1,0 @@
-organization=tomas1612
-projectKey=Tomas1612_TrabajoIngSoft
-serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.2632
-dashboardUrl=https://sonarcloud.io/dashboard?id=Tomas1612_TrabajoIngSoft
-ceTaskId=AW5k83_Zfm5RZZpGBSI3
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AW5k83_Zfm5RZZpGBSI3
