@@ -33,7 +33,7 @@ node {
     sh ./mvnw sonar:sonar \
     -Dsonar.pullrequest.provider=GitHub \
     -Dsonar.pullrequest.github.repository=${org}/${repo} \
-    -Dsonar.pullrequest.key='Tomas1612_TrabajoIngSoft' \
+    -Dsonar.pullrequest.key=6233a4a8667bc3bbe5c04cc4936f58cb9981708e \
     -Dsonar.pullrequest.branch='/Tomas1612/TrabajoIngSoft'
 }
 
