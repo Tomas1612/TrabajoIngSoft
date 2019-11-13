@@ -20,6 +20,19 @@ node {
          }
       }
    }
+    /*stage('Test') {
+         withEnv(["MVN_HOME=$mvnHome"]) {
+            steps {
+                sh 'check'
+            }
+
+        }
+    }*/
+    post {
+        always {
+            junit 'server/target/surefire-reports/*.xml'
+        }
+    }
    stage('SonarCloud'){
        withEnv(["MVN_HOME=$mvnHome"]) {
         dir('server/'){
