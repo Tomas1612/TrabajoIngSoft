@@ -24,9 +24,12 @@ node {
        withEnv(["MVN_HOME=$mvnHome"]) {
         dir('server/'){
             //metricas de codigo
-            sh '"$MVN_HOME/bin/mvn" verify sonar:sonar -Dsonar.projectKey=NNelo_IS3Tomas1612_TrabajoIngSoft -Dsonar.organization=tomas1612 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=6233a4a8667bc3bbe5c04cc4936f58cb9981708e -Dmaven.test.failure.ignore=true'
+            sh '"$MVN_HOME/bin/mvn" verify sonar:sonar -Dsonar.projectKey=NNelo_IS3Tomas1612_TrabajoIngSoft -Dsonar.organization=tomas1612 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=0460d98ff92aa4a85471b29e7240357c9059f47f -Dmaven.test.failure.ignore=true'
         }
       }
+   }
+   stage('Results'){
+       archiveArtifacts 'server/target/*.jar'
    }
 }
 
