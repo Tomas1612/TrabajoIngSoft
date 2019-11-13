@@ -35,4 +35,5 @@ node {
    -Dsonar.organization=tomas1612 \
    -Dsonar.host.url=https://sonarcloud.io \
    -Dsonar.login=2af12740582afb38ce4d7dca0427271de37abc95 
+    }
 }
