@@ -29,8 +29,8 @@ node {
       }
    }
    stage('Push Image'){
-        withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'password', usernameVariable: 'user')]) {
-            sh "docker login -u ${user} -p ${password}"
+        withCredentials([usernamePassword(credentialsId: 'dockerhub'/*, passwordVariable: 'password', usernameVariable: 'user'*/)]) {
+            sh "docker login -u 'macrosizen' -p 'tomiRiver10'"
             sh label: '', script: 'docker push macrosizen/server'
         }
     }
