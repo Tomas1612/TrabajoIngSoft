@@ -34,20 +34,14 @@ node {
     dockerImage = ''
     }
     stage('Building image') {
-    steps{
       script {
         docker.build registry + ":$BUILD_NUMBER"
-            }
         }
     }
     stage('Deploy Image') {
-      steps{
-        script {
-          docker.withRegistry( '', registryCredential ) {
+            docker.withRegistry( '', registryCredential ) {
             dockerImage.push()
           }
-        }
-      }
     }
    stage('Results'){
        archiveArtifacts 'server/target/*.jar'
