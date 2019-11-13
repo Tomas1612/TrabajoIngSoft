@@ -29,9 +29,9 @@ node {
       }
    }
    stage('Push Image') {
-	 docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
-		sh '/server'
-		customImage = docker.build("macrosizen/server")
+	 docker.withRegistry('https://hub.docker.com/repository/docker/macrosizen/server', 'dockerhub') {
+		sh 'server/'
+		customImage = docker.build('server/Dockerfile')
 		customImage.push()		
     }
    }
