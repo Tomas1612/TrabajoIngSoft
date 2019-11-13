@@ -29,9 +29,9 @@ node {
       }
    }
    environment {
-    registry = "macrosizen/server"
-    registryCredential = 'dockerhub'
-    dockerImage = ''
+    def registry = "macrosizen/server"
+    def registryCredential = 'dockerhub'
+    def dockerImage = ''
     }
     stage('Building image') {
       script {
