@@ -28,12 +28,19 @@ node {
         }
       }
    }
-   stage('Push Image'){
-       // withCredentials([usernamePassword(credentialsId: 'dockerhub'/*, passwordVariable: 'password', usernameVariable: 'user'*/)]) 
+   stage('Push Image') {
+	 docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+		sh '/server'
+		customImage = docker.build("macrosizen/server")
+		customImage.push()		
+    }
+   }
+   /*stage('Push Image'){
+        withCredentials([usernamePassword(credentialsId: 'dockerhub'/*, passwordVariable: 'password', usernameVariable: 'user')]) 
             sh "docker login -u 'macrosizen' -p 'tomiRiver10'"
             sh label: '', script: 'docker push macrosizen/server'
     }
-   /*
+   
    environment {
     def registry = "macrosizen/server"
     def registryCredential = 'dockerhub'
