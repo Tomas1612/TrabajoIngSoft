@@ -21,7 +21,7 @@ node {
       }
    }
    stage('SonarCloud'){
-        dir('payroll/server/'){
+        dir('server/'){
             //metricas de codigo
             //sh label: '', 
             script: 'mvn verify sonar:sonar -Dsonar.projectKey=NNelo_IS3Tomas1612_TrabajoIngSoft -Dsonar.organization=tomas1612 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=6233a4a8667bc3bbe5c04cc4936f58cb9981708e -Dmaven.test.failure.ignore=true'
