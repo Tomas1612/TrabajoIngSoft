@@ -28,9 +28,11 @@ node {
 
         }
     }*/
-    post {
-        always {
+    stage('post') {
+        post{
+            always {
             junit 'server/target/surefire-reports/*.xml'
+            }
         }
     }
    stage('SonarCloud'){
