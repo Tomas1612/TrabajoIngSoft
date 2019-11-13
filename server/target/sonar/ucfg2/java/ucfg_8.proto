@@ -1,0 +1,53 @@
+
+Lpayroll.EmployeeController#newEmployee(Lpayroll/Employee;)Lpayroll/Employee;^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java
+ ("paramAnnotations*Ä
+paramAnnotations^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java (8Ñ
+Î
+^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java (
+%2"
+__annotate*75
+3org.springframework.web.bind.annotation.PostMapping*!
+
+newEmployeepayroll.EmployeeÑ
+Î
+^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java ("
+%3"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*!
+
+newEmployeepayroll.Employee¢
+Ÿ
+^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java, (7
+newEmployeepayroll.Employee"__annotation*
+
+%2*
+
+%3*
+1*½
+1^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java	 (»
+¸
+^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java	 ( 
+%0payroll.EmployeeRepository"__id*.*,
+payroll.EmployeeController"
+
+repository¬©
+^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java	 (%
+%1S"]org.springframework.data.repository.CrudRepository#save(Ljava/lang/Object;)Ljava/lang/Object;*"
+ 
+%0payroll.EmployeeRepository*!
+
+newEmployeepayroll.Employee2save(Ljava/lang/Object;)"k
+^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java (&	
+
+%1S:
+newEmployeepayroll.EmployeeB
+payroll.EmployeeController

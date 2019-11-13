@@ -1,0 +1,90 @@
+
+`payroll.EmployeeController#replaceEmployee(Lpayroll/Employee;Ljava/lang/Long;)Lpayroll/Employee;^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java,
+ ,("paramAnnotations*Ô	
+paramAnnotations^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java, ,(S–
+Õ
+^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java+ +(
+%4"
+__annotate*64
+2org.springframework.web.bind.annotation.PutMapping*!
+
+newEmployeepayroll.Employee—
+Œ
+^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java, ,(&
+%5"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*!
+
+newEmployeepayroll.Employee¢
+ü
+^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java,0 ,(;
+newEmployeepayroll.Employee"__annotation*
+
+%4*
+
+%5≈
+¬
+^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java+ +(
+%6"
+__annotate*64
+2org.springframework.web.bind.annotation.PutMapping*
+
+idjava.lang.Long«
+ƒ
+^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java,= ,(J
+%7"
+__annotate*86
+4org.springframework.web.bind.annotation.PathVariable*
+
+idjava.lang.Longó
+î
+^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java,P ,(R
+idjava.lang.Long"__annotation*
+
+%6*
+
+%7*
+1*Ï	
+1^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java.	 .(ª
+∏
+^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java.	 .( 
+%0payroll.EmployeeRepository"__id*.*,
+payroll.EmployeeController"
+
+repositoryºπ
+^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java.	 .( 
+%1java.util.Optional"corg.springframework.data.repository.CrudRepository#findById(Ljava/lang/Object;)Ljava/util/Optional;*"
+ 
+%0payroll.EmployeeRepository*
+
+idjava.lang.Long2findById(Ljava/lang/Object;)êç
+^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java.	 3(
+%2java.util.Optional"Ijava.util.Optional#map(Ljava/util/function/Function;)Ljava/util/Optional;*
+
+%1java.util.Optional*
+""2"map(Ljava/util/function/Function;)âÜ
+^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java.	 7(
+%3S"Mjava.util.Optional#orElseGet(Ljava/util/function/Supplier;)Ljava/lang/Object;*
+
+%2java.util.Optional*
+""2(orElseGet(Ljava/util/function/Supplier;)"k
+^
+T/home/macro/Universidad/payroll/server/src/main/java/payroll/EmployeeController.java. 7(	
+
+%3S:
+newEmployeepayroll.Employee:
+idjava.lang.LongB
+payroll.EmployeeController
