@@ -28,6 +28,7 @@ node {
         }
       }
    }
+   /*
    environment {
     def registry = "macrosizen/server"
     def registryCredential = 'dockerhub'
@@ -42,7 +43,7 @@ node {
             docker.withRegistry( '', registryCredential ) {
             dockerImage.push()
           }
-    }
+    }*/
    stage('Results'){
        archiveArtifacts 'server/target/*.jar'
        junit '**/target/surefire-reports/TEST-*.xml'
