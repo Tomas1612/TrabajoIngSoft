@@ -13,9 +13,8 @@ node {
       withEnv(["MVN_HOME=$mvnHome"]) {
              dir('server') {
                 sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
-                //customImage = docker.build("macrosizen/server")
-        
          }
+         docker.build("macrosizen/server")
       }
    }
    stage('SonarCloud'){
