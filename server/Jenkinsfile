@@ -28,11 +28,12 @@ node {
      sh 'docker login --username=_ --password=${password} registry.heroku.com'
      sh 'docker tag macrosizen/server registry.heroku.com/aqueous-river-20462/web'
      sh 'docker push registry.heroku.com/aqueous-river-20462/web'
+     sh 'heroku container:release web -a aqueous-river-20462'
       }
      }
 
    stage('Integration test'){
-      sh 'cd server/src/test/payroll-test && node node_modules/.bin/codeceptjs run --steps --reporter mocha-multi'
+      sh 'cd server/src/test/payrol-test && node node_modules/.bin/codeceptjs run --steps --reporter mocha-multi'
    }
    
    stage('Results') {
