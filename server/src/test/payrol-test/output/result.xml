@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.024" tests="2" failures="2">
+  <testsuite name="Root Suite" timestamp="2019-11-14T18:14:52" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Payroll" timestamp="2019-11-14T18:14:52" tests="2" file="/home/macro/Universidad/payroll/server/src/test/payrol-test/github_test.js" failures="2" time="0.024">
+    <testcase name="Payroll: Verificar a successful call" time="0.021" classname="Verificar a successful call">
+      <failure message="expected 403 to deeply equal 200" type="AssertionError"><![CDATA[expected 403 to deeply equal 200]]></failure>
+    </testcase>
+    <testcase name="Payroll: Verificar empleado 1" time="0.003" classname="Verificar empleado 1">
+      <failure message="expected undefined to deeply equal &apos;Bilbo&apos;" type="AssertionError"><![CDATA[expected undefined to deeply equal 'Bilbo']]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
