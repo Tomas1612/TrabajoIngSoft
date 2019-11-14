@@ -17,7 +17,6 @@ node {
 	    sh 'cd server && "$MVN_HOME/bin/mvn" verify sonar:sonar -Dsonar.projectKey=Tomas1612_TrabajoIngSoft -Dsonar.organization=tomas1612 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=dfbf8525eac709bdf61b797c0378b18ce4a8cd42 -Dmaven.test.failure.ignore=true'
 	}
    }
-
    stage('Push Image') {
      docker.withRegistry('', 'dockerhub') {
 	   image.push()
