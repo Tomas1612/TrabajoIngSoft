@@ -38,7 +38,7 @@ node {
   */ 
    stage('Results') {
       archiveArtifacts 'server/target/*.jar'
-      archiveArtifacts 'server/src/test/payroll-test/output/result.xml'
+      archiveArtifacts 'server/src/test/payrol-test/output/result.xml'
       junit '*/target/surefire-reports/TEST-*.xml'
       archiveArtifacts 'server/target/surefire-reports/*.xml'
    }
