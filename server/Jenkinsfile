@@ -7,8 +7,8 @@ node {
    }
    stage('Build') {
       withEnv(["MVN_HOME=$mvnHome"]) {
-        dir('payroll/server/'){'"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'}
-		image = docker.build("macrosizen/server")
+        dir('payroll/server/'){'"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
+		image = docker.build("macrosizen/server")}
       }
    }
    stage('Sonar Cloud') {
