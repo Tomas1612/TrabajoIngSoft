@@ -11,7 +11,7 @@ node {
 		dir('server/'){image = docker.build("macrosizen/server")}
       }
    }
-
+   /*
    stage('Sonar Cloud') {
 	 withEnv(["MVN_HOME=$mvnHome"]) {
 	    sh 'cd server && "$MVN_HOME/bin/mvn" verify sonar:sonar -Dsonar.projectKey=Tomas1612_TrabajoIngSoft -Dsonar.organization=tomas1612 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=dfbf8525eac709bdf61b797c0378b18ce4a8cd42 -Dmaven.test.failure.ignore=true'
@@ -22,16 +22,16 @@ node {
      docker.withRegistry('', 'dockerhub') {
 	   image.push()
 	 }
-   }
+   }*/
    stage('Deploy'){
-	   withCredentials([usernamePassword(credentialsId: 'herokuCredentials', passwordVariable: 'password', usernameVariable: 'user')]) {
-		sh 'docker login --username=_ --password=${password} registry.heroku.com'
+	   //withCredentials([usernamePassword(credentialsId: 'herokuCredentials', passwordVariable: 'password', usernameVariable: 'user')]) {
+		sh 'docker login --username=tomasgiraudo97@gmail.com --password=tomiRiver10 registry.heroku.com'
 		sh 'docker tag macrosizen/server registry.heroku.com/limitless-inlet-58465/web'
 		sh 'docker push registry.heroku.com/limitless-inlet-58465/web'
 		sh 'heroku container:release web --app=limitless-inlet-58465'
-	   }
+	   //}
    }
-   
+
    stage('Results') {
       archiveArtifacts 'server/target/*.jar'
       junit '*/target/surefire-reports/TEST-*.xml'
