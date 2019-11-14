@@ -29,8 +29,8 @@ node {
    }
     stage('Push Image') {
 	 docker.withRegistry('https://hub.docker.com/repository/docker/macrosizen/server', 'dockerhub') {
-        docker push macrosizen/server
-    }
+        docker.push("macrosizen/server")
+         }
     }
    /*stage('Push Image'){
         withCredentials([usernamePassword(credentialsId: 'dockerhub'/*, passwordVariable: 'password', usernameVariable: 'user')]) 
