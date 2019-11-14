@@ -31,11 +31,11 @@ node {
      sh 'heroku container:release web -a aqueous-river-20462'
       }
      }
-
+/*
    stage('Integration test'){
       sh 'cd server/src/test/payrol-test && node node_modules/.bin/codeceptjs run --steps --reporter mocha-multi'
    }
-   
+  */ 
    stage('Results') {
       archiveArtifacts 'server/target/*.jar'
       archiveArtifacts 'server/src/test/payroll-test/output/result.xml'
