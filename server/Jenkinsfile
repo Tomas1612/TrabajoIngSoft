@@ -27,4 +27,5 @@ node {
       archiveArtifacts 'server/target/*.jar'
       junit '*/target/surefire-reports/TEST-*.xml'
    }
+   
 }
