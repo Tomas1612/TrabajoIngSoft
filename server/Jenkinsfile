@@ -30,7 +30,6 @@ node {
      sh 'docker tag macrosizen/server registry.heroku.com/limitless-inlet-58465/web'
      sh 'docker push registry.heroku.com/limitless-inlet-58465/web'
      sh 'heroku container:release web --app=limitless-inlet-58465'
-     sh 'e'
       }
      }
 
