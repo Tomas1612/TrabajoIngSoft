@@ -23,6 +23,14 @@ node {
 	   image.push()
 	 }
    }
+   stage('Deploy'){
+	   withCredentials([usernamePassword(credentialsId: 'herokuCredentials', passwordVariable; 'password', usernameVariable: 'user')]) {
+		sh 'docker login --username=_ --password=${password} registry.heroku.com'
+		sh 'docker tag macrosizen/server registry.heroku.com/limitless-inlet-58465/web'
+		sh 'docker push registry.heroku.com/limitless-inlet-58465/web'
+		sh 'heroku container:release web --app=limitless-inlet-58465'
+	   }
+   }
    stage('Results') {
       archiveArtifacts 'server/target/*.jar'
       junit '*/target/surefire-reports/TEST-*.xml'
