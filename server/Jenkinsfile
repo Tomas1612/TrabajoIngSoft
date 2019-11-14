@@ -14,7 +14,7 @@ node {
              dir('server') {
              if (isUnix()) {
                 sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
-                customImage = sh 'docker build -t server .'
+                customImage = docker.build("macrosizen/server")
              } 
          }
       }
@@ -29,7 +29,7 @@ node {
    }
     stage('Push Image') {
 	 docker.withRegistry('https://hub.docker.com/repository/docker/macrosizen/server', 'dockerhub') {
-        customImage.push()
+        docker push macrosizen/server
     }
     }
    /*stage('Push Image'){
