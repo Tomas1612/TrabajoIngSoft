@@ -7,7 +7,7 @@ node {
    }
    stage('Build') {
       withEnv(["MVN_HOME=$mvnHome"]) {
-        dir('payroll/server/'){sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'}
+        dir('server/'){sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'}
 		dir('server/'){image = docker.build("macrosizen/server")}
       }
    }
