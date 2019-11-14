@@ -35,6 +35,7 @@ node {
    stage('Integration test'){
       sh 'cd server/src/test/payrol-test && node node_modules/.bin/codeceptjs run --steps --reporter mocha-multi'
    }
+   
   */ 
    stage('Results') {
       archiveArtifacts 'server/target/*.jar'
